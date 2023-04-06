@@ -1,7 +1,8 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import HeaderProject from "@/components/HeaderProject.vue";
+    import HelloWorld from './components/HelloWorld.vue'
+    import TheWelcome from './components/TheWelcome.vue'
+    import HeaderProject from "@/components/HeaderProject.vue";
+    import ListComponent from "@/components/list-component.vue";
 </script>
 
 <template>
@@ -14,11 +15,7 @@ import HeaderProject from "@/components/HeaderProject.vue";
   </header>
 
   <main>
-      <HeaderProject/>
-      <HeaderProject name="Componente 1"/>
-      <HeaderProject name="Componente 2"/>
-      <HeaderProject name="Componente 3"/>
-
+      <list-component />
   </main>
 </template>
 
