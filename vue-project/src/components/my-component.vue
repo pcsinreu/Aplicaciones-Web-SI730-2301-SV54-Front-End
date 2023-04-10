@@ -1,8 +1,8 @@
 <template>
-    <div class="containerGrid">
+    <div class="container">
       <div class="my-class">My component {{name}} {{title}}</div>
-        <button @click ="handleClick(2)" > click me!</button>
-        <input type="text" @input="handleChange">
+        <input type="text" @input="handleChange" >
+        <input type="button" @click="handleClick(3)" value="Click me !">
     </div>
 </template>
 
@@ -11,16 +11,16 @@ export default {
     props: ['name'],
     name: "header",
     data() {
-        return { title: 'titulo 1' }
+        return { title: 'titulo 1' + Math.floor(Math.random())}
     },
     mounted() {
-        console.log('-----montando componete')
+        console.log('-----montando componente')
     },
     updated() {
-        console.log('-----actualizando componet')
+        console.log('-----actualizando componente')
     },
     unmounted() {
-        console.log('-----unmount componet')
+        console.log('-----unmount componente')
     },
     methods: {
         handleClick(numberA) {
@@ -46,8 +46,11 @@ export default {
 
 .container {
     display: flex;
-    flex-direction: row;
+    gap:10px;
+    flex-direction: column;
     align-items: center;
+    padding: 10px;
+    border: #282828 solid;
 }
 
 
