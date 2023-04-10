@@ -1,17 +1,18 @@
 <template>
 
-    <div v-for="category in categories">
-        <HeaderProject :name=category.name />
+    <div class="container-list">
+        <div v-for="category in categories" >
+            <myComponent :name=category.name />
+        </div>
     </div>
-
 </template>
 
 <script>
-import HeaderProject from "@/components/HeaderProject.vue";
+import myComponent from "@/components/my-component.vue";
 
 export default {
     name: "list-component",
-    components: {HeaderProject},
+    components: {myComponent},
     data() {
         return{
             categories :[]
@@ -25,5 +26,11 @@ export default {
 </script>
 
 <style scoped>
+
+.container-list {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap: 10px;
+}
 
 </style>
