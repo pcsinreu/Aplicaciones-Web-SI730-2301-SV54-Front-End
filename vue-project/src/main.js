@@ -13,6 +13,7 @@ import "primevue/resources/primevue.min.css"; //core
 import "primeicons/primeicons.css"; //icons
 import Button from "primevue/button"
 import InputText from 'primevue/inputtext';
+import 'primeflex/primeflex.css'
 
 const app = createApp(App);
 

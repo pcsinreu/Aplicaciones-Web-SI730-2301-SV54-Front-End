@@ -1,26 +1,13 @@
 <template>
-    <div class="container">
-      <div class="my-class">My component {{name}} {{title}}</div>
-        <input type="text" @input="handleChange" >
-        <pv-inputText type="text"  />
-        <input type="button" @click="handleClick(3)" value="Click me !">
-        <pv-button label="Click me !"  icon="pi pi-check" severity="danger"/>
+    <div class="flex flex-column m-1 gap-3 container bg-green-100">
+        <div class="flex align-items-center justify-content-center">My component {{name}} {{title}}</div>
+        <input class="flex align-items-center justify-content-center" type="text" @input="handleChange" >
+        <pv-inputText type="text" class="flex align-items-center justify-content-center"  />
+        <input type="button" @click="handleClick(3)" value="Click me !" class="flex align-items-center justify-content-center">
+        <pv-button label="Click me !"  icon="pi pi-check" severity="danger" class="flex align-items-center justify-content-center"/>
     </div>
 </template>
 
-
-+51 964556+4654
-519852522
-96565656565
-(51)8+989+8
-
-51-89999999
-51-89999999
-51-89999999
-51-89999999
-51-89999999
-51-89999999
-51-89999999
 
 <script>
 export default {
@@ -61,10 +48,7 @@ export default {
 }
 
 .container {
-    display: flex;
-    gap:10px;
-    flex-direction: column;
-    align-items: center;
+
     padding: 10px;
     border: #282828 solid;
 }

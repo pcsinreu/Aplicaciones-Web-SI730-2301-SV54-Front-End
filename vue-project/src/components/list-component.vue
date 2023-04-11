@@ -1,8 +1,8 @@
 <template>
 
-    <div class="container-list">
+    <div class="grid">
         <div v-for="category in categories" >
-            <myComponent :name=category.name />
+            <myComponent :name=category.name class="col" />
         </div>
     </div>
 </template>
