@@ -3,6 +3,7 @@
       <div class="my-class">My component {{name}} {{title}}</div>
         <input type="text" @input="handleChange" >
         <input type="button" @click="handleClick(3)" value="Click me !">
+        <pv-button label="Click me !"  icon="pi pi-check" severity="danger"/>
     </div>
 </template>
 
