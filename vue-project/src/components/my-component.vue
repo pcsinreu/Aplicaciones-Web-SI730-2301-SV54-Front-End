@@ -2,10 +2,25 @@
     <div class="container">
       <div class="my-class">My component {{name}} {{title}}</div>
         <input type="text" @input="handleChange" >
+        <pv-inputText type="text"  />
         <input type="button" @click="handleClick(3)" value="Click me !">
         <pv-button label="Click me !"  icon="pi pi-check" severity="danger"/>
     </div>
 </template>
+
+
++51 964556+4654
+519852522
+96565656565
+(51)8+989+8
+
+51-89999999
+51-89999999
+51-89999999
+51-89999999
+51-89999999
+51-89999999
+51-89999999
 
 <script>
 export default {
