@@ -14,9 +14,12 @@ import "primeicons/primeicons.css"; //icons
 import Button from "primevue/button"
 import InputText from 'primevue/inputtext';
 import 'primeflex/primeflex.css'
+import i18n from'../src/locales/i18n'
+
 
 const app = createApp(App);
 
+app.use(i18n);
 app.use(PrimeVue);
 
 app.component('pv-button', Button);

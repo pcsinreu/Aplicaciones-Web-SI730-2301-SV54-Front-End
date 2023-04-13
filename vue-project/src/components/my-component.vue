@@ -1,10 +1,13 @@
 <template>
     <div class="flex flex-column m-1 gap-3 container bg-green-100">
-        <div class="flex align-items-center justify-content-center">My component {{name}} {{title}}</div>
+        <div class="flex align-items-center justify-content-center">{{ $t('MyComponent')}} {{name}} {{title}}</div>
         <input class="flex align-items-center justify-content-center" type="text" @input="handleChange" >
         <pv-inputText type="text" class="flex align-items-center justify-content-center"  />
-        <input type="button" @click="handleClick(3)" value="Click me !" class="flex align-items-center justify-content-center">
-        <pv-button label="Click me !"  icon="pi pi-check" severity="danger" class="flex align-items-center justify-content-center"/>
+
+        <img src="gatos" alt="gato">
+        <label for="name" >Name:</label>
+        <input id="name" type="button" @click="handleClick(3)" value="Click me !" class="flex align-items-center justify-content-center">
+        <pv-button :label="$t('ClickMe')"  icon="pi pi-check" severity="danger" class="flex align-items-center justify-content-center"/>
     </div>
 </template>
 
