@@ -6,15 +6,19 @@
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
   </header>
+  <nav>
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/AddTutorial/:id">Go to add Tutorial</router-link>
+    <router-link to="/ListComponent">Go to list Component</router-link>
 
+  </nav>
   <main>
-      <list-component />
+      <router-view />
   </main>
+  <footer>
+      <div>Footer</div>
+  </footer>
 </template>
 
 <style scoped>
