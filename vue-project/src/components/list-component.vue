@@ -25,7 +25,7 @@ export default {
         getAllUser: function (){
             this.userService.getUser().then(function (response) {
                 console.log('response',response.data)
-                this.users = response.data
+                this.users = response.data // pendiente
         });
         }
     },
