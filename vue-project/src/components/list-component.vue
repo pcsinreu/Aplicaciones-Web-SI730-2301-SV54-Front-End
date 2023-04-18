@@ -9,18 +9,32 @@
 
 <script>
 import myComponent from "@/components/my-component.vue";
+import {UserServices} from "@/services/user-api.services";
 
 export default {
     name: "list-component",
     components: {myComponent},
     data() {
         return{
-            categories :[]
+            categories :[],
+            userService : new UserServices()
         }
     },
-    beforeMount() {
+    methods:{
+        getAllUser: function (){
+            this.userService.getUser().then(function (response) {
+                console.log('response',response.data)
+                this.categories = response.data
+        });
+        }
+    },
+    mounted() {
         //invoco API
-          this.categories = [{name:'nombre 1'},{name:'nombre 2'},{name:'nombre 3'},{name:'nombre 4'}]
+        this.getAllUser();
+
+
+        //single responsability
+        //this.categories = [{name:'nombre 1'},{name:'nombre 2'},{name:'nombre 3'},{name:'nombre 4'}]
     }
 }
 </script>
