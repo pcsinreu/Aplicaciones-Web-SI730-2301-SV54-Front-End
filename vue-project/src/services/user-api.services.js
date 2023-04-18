@@ -16,7 +16,7 @@ export class UserServices{
 
     postUser =(body)=>{
 
-        return http.postUser('users',{ body});
+        return http.post('users', body);
 
     };
     putUser =(body,id)=>{

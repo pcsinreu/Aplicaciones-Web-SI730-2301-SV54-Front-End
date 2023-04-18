@@ -11,6 +11,7 @@
     <router-link to="/">Go to Home</router-link>
     <router-link to="/AddTutorial/:id">Go to add Tutorial</router-link>
     <router-link to="/ListComponent">Go to list Component</router-link>
+      <router-link to="/AddUser">Go to Ad User</router-link>
 
   </nav>
   <main>
