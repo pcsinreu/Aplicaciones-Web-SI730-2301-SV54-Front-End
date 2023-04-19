@@ -4,12 +4,15 @@ import ListComponent from "@/components/list-component.vue";
 import NotFound from "@/components/NotFound.vue";
 import {createRouter,createWebHashHistory}    from 'vue-router'
 import UserForm from "@/components/user-form.vue";
+import ListUser from "@/components/list-user.vue";
 
 const routes = [
     {path:'/',component:Home },
     {path:'/AddTutorial/:id',component:FormData },
     {path:'/AddUser',component:UserForm },
+    {path:'/AddUser/:id',component:UserForm,name: 'user', },
     {path:'/ListComponent',component:ListComponent },
+    {path:'/ListUser',component:ListUser },
     {path:'/:catchAll(.*)', component: NotFound}
 ]
 

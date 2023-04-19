@@ -4,25 +4,37 @@
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-  </header>
-  <nav>
-    <router-link to="/">Go to Home</router-link>
-    <router-link to="/AddTutorial/:id">Go to add Tutorial</router-link>
-    <router-link to="/ListComponent">Go to list Component</router-link>
-      <router-link to="/AddUser">Go to Ad User</router-link>
 
-  </nav>
-  <main>
-      <router-view />
-  </main>
-  <footer>
-      <div>Footer</div>
-  </footer>
+    <div class="container">
+      <nav class="nav-container">
+              <router-link to="/">Go to Home</router-link>
+              <router-link to="/AddTutorial/:id">Tutorial</router-link>
+              <router-link to="/ListComponent">Component</router-link>
+              <router-link to="/ListUser">Users</router-link>
+              <router-link to="/AddUser">Ad User</router-link>
+      </nav>
+      <main>
+          <router-view />
+      </main>
+      <footer>
+          <div>Footer</div>
+      </footer>
+    </div>
 </template>
 
 <style scoped>
+.container{
+    display : flex;
+    flex-direction:column;
+
+}
+.nav-container {
+    display : flex;
+    flex-direction:row;
+
+    grid-gap:10px;
+
+}
 header {
   line-height: 1.5;
 }
