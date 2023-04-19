@@ -1,5 +1,5 @@
 import Home from '../src/components/Home.vue'
-import FormData from "@/components/form-data.vue";
+import FormData from "@/components/form-data.component.vue";
 import ListComponent from "@/components/list-component.vue";
 import NotFound from "@/components/NotFound.vue";
 import {createRouter,createWebHashHistory}    from 'vue-router'

@@ -15,7 +15,7 @@ export default {
     name: "list-component",
     components: {myComponent},
     data() {
-        return{
+        return {
             categories :[],
             users :null,
             userService : new UserServices()
@@ -23,13 +23,13 @@ export default {
     },
     methods:{
         getAllUser: function (){
-            this.userService.getUser().then(function (response) {
+            this.userService.getUser().then( (response) =>{
                 console.log('response',response.data)
-                this.users = response.data // pendiente
+                this.users = response.data;
         });
         }
     },
-    mounted() {
+    beforeMount() {
         //invoco API
         this.getAllUser();
         //single responsability
