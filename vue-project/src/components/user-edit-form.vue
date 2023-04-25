@@ -1,11 +1,11 @@
 <template>
     <div class="my-form">
-        <div>Edit User</div>
+        <div>Edit User {{id}}</div>
         <label for="name2">Name :</label>
          <pv-inputText v-model="name2" id="name2"></pv-inputText>
         <label for="username">Username :</label>
         <pv-inputText v-model="username" id="username"></pv-inputText>
-        <pv-button label="Save" @click="editUser()"></pv-button>}
+        <pv-button label="Save" @click="editUser()"></pv-button>
     </div>
 </template>
 

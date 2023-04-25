@@ -8,8 +8,6 @@
     <div class="container">
       <nav class="nav-container">
               <router-link to="/">Go to Home</router-link>
-              <router-link to="/AddTutorial/:id">Tutorial</router-link>
-              <router-link to="/ListComponent">Component</router-link>
               <router-link to="/ListUser">Users</router-link>
               <router-link to="/AddUser">Ad User</router-link>
       </nav>
