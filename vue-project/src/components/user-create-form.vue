@@ -14,6 +14,11 @@
 import {UserServices} from "@/services/user-api.services";
 export default {
     name: "new-user-form",
+    data(){
+      return{
+          userService : new UserServices()
+      }
+    },
     methods:{
 
         saveuser(){

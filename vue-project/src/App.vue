@@ -9,7 +9,7 @@
       <nav class="nav-container">
               <router-link to="/">Go to Home</router-link>
               <router-link to="/ListUser">Users</router-link>
-              <router-link to="/AddUser">Ad User</router-link>
+              <router-link to="/User">Ad User</router-link>
       </nav>
       <main>
           <router-view />

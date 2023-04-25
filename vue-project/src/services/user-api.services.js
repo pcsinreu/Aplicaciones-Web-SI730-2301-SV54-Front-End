@@ -20,19 +20,11 @@ export class UserServices{
 
     };
     putUser =(body,id)=>{
-        return axios({
-            method: 'post',
-            url: 'users/' +id,
-            data:body
-        })
+        return http.put('users/'+id,body)
 
     }
-    deletUser =(id)=>{
-        return axios({
-            method: 'delete',
-            url: 'users' +id
-        })
-
+    deleteUser =(id)=>{
+        return http.delete("users/"+id);
     }
 
 }

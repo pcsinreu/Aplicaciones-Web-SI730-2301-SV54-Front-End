@@ -10,7 +10,7 @@ import UserCreateForm from "@/components/user-create-form.vue";
 const routes = [
     {path:'/',component:Home },
     {path:'/AddTutorial/:id',component:FormData },
-    {path:'/AddUser',component:UserCreateForm },
+    {path:'/User',component:UserCreateForm },
     {path:'/User/:id',component:UserEditForm,name: 'user', },
     {path:'/ListComponent',component:ListComponent },
     {path:'/ListUser',component:ListUser },
