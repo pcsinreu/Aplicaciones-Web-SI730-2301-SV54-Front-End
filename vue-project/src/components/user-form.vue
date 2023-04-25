@@ -2,7 +2,7 @@
     <div class="my-form">
         <label for="name2">Name :</label>
          <pv-inputText v-model="name2" id="name2"></pv-inputText>
-        <label for="username">Useranme :</label>
+        <label for="username">Username :</label>
         <pv-inputText v-model="username" id="username"></pv-inputText>
         <pv-button label="Save" @click="saveuser()"></pv-button>}
     </div>
@@ -15,6 +15,7 @@ export default {
     name: "user-form",
     data(){
         return{
+            id:0,
             name2: '',
             username:'',
             userService : new UserServices()
@@ -36,6 +37,18 @@ export default {
                   }
 
               })
+        }
+    },
+    mounted() {
+        if(this.$route.params.id){
+            this.id = this.$route.params.id;
+            console.log('getting id ',this.$route.params.id)
+            this.userService.getUserById(this.id).then((response)=>{
+
+                this.name2 = response.data.name;
+                this.username = response.data.username;
+            })
+
         }
     }
 }

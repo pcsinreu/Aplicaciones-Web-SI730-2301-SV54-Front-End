@@ -11,7 +11,7 @@ export class UserServices{
        return http.get('users')
     };
     getUserById= (id) => {
-        return http.get('users' +id);
+        return http.get('users/' +id);
     };
 
     postUser =(body)=>{
@@ -22,7 +22,7 @@ export class UserServices{
     putUser =(body,id)=>{
         return axios({
             method: 'post',
-            url: 'users' +id,
+            url: 'users/' +id,
             data:body
         })
 

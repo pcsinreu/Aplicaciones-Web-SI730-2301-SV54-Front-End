@@ -10,7 +10,7 @@ const routes = [
     {path:'/',component:Home },
     {path:'/AddTutorial/:id',component:FormData },
     {path:'/AddUser',component:UserForm },
-    {path:'/AddUser/:id',component:UserForm,name: 'user', },
+    {path:'/User/:id',component:UserForm,name: 'user', },
     {path:'/ListComponent',component:ListComponent },
     {path:'/ListUser',component:ListUser },
     {path:'/:catchAll(.*)', component: NotFound}
