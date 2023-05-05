@@ -10,6 +10,7 @@
               <router-link to="/">Go to Home</router-link>
               <router-link to="/ListUser">Users</router-link>
               <router-link to="/User">Ad User</router-link>
+              <router-link to="/posts">Posts</router-link>
       </nav>
       <main>
           <router-view />
@@ -24,14 +25,11 @@
 .container{
     display : flex;
     flex-direction:column;
-
 }
 .nav-container {
     display : flex;
     flex-direction:row;
-
     grid-gap:10px;
-
 }
 header {
   line-height: 1.5;
