@@ -8,7 +8,9 @@
 </template>
 
 <script>
-import {PostsApiService} from "@/services/posts-adpi.service";
+
+
+import {PostsApiService} from "@/services/post-api.services";
 
 export default {
     name: "posts",
@@ -16,6 +18,7 @@ export default {
         return{
             posts :[],
             postService : new PostsApiService()
+
         }
     },
     methods:{
@@ -40,9 +43,7 @@ export default {
     },
     beforeMount() {
         this.getAll()
-        //alert(window.localStorage.getItem("test") )
     }
-
 }
 </script>
 
