@@ -42,6 +42,7 @@ export default {
         }
     },
     beforeMount() {
+        window.sessionStorage.getItem("test")
         this.getAll()
     }
 }

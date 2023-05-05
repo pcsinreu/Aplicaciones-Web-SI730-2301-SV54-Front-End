@@ -2,8 +2,8 @@
 
     <div class="form-user">
         <div class="input-control">
-          <label class="label-input">User : </label>
-          <pv-inputText v-model="username"></pv-inputText>
+          <label class="label-input">email : </label>
+          <pv-inputText v-model="email"></pv-inputText>
         </div>
         <p/>
         <div  class="input-control">
@@ -17,16 +17,31 @@
 </template>
 
 <script>
+import {UserServices} from "@/services/user-api.services";
+
 export default {
   name: "Home",
   data(){
       return{
-          username:'',
-          password:''
+          email:'',
+          password:'',
+          userService :new UserServices()
       }
   },
   methods:{
       loginUser(){
+
+          const body ={
+              email:this.email,
+              password : this.password
+          }
+
+          this.userService.login(body).then((response)=>{
+              console.log(response.data.accessToken)
+              window.localStorage.setItem('jwt',response.data.accessToken)
+
+
+          })
 
        console.log('login')
       }
